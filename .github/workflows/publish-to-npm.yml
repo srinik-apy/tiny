@@ -14,7 +14,7 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
 ##       - run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
-      - run: cat ~/.npmrc
+      - run: cat .npmrc
 ##       - run: npm ci
 ##       - run: npm publish --verbose
 ##       - run: yarn publish
