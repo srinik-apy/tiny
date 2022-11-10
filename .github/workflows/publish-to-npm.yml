@@ -12,7 +12,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '19'
-          resgistry-url: 'https://registry.npmjs.org'
-      - run: yarn publish --access public
+          registry-url: 'https://registry.npmjs.org'
+          always-auth: true
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_ACCESS_TOKEN}}
