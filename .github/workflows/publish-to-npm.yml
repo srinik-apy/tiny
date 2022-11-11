@@ -15,9 +15,9 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 ##       - run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
 ##       - run: cat .npmrc
-      - run: env
-##       - run: npm ci
-##       - run: npm publish --verbose
+##       - run: env
+      - run: npm ci
+      - run: npm publish --access public --verbose
 ##       - run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
